@@ -1,0 +1,1 @@
+0 3 * * * ansible-playbook /home/maver/ansible-project/playbooks/update.yml -i /home/maver/ansible-project/inventories/prod/hosts.ini
