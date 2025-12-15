@@ -33,11 +33,9 @@ Manually maintaining several servers takes a lot of effort, is tedious, and freq
 
 
 
-&nbsp;  inventories/
-
-&nbsp;  └── prod/
-
-&nbsp;       └── hosts.ini
+    inventories/
+    └── prod/
+        └── hosts.ini
 
 
 
@@ -47,13 +45,13 @@ Manually maintaining several servers takes a lot of effort, is tedious, and freq
 
 
 
-&nbsp;   \[allnodes]
+     \[allnodes]
 
-&nbsp;   host1 ansible\_host=44.200.103.209 ansible\_user=ubuntu ansible\_ssh\_private\_key\_file=/home/maver/.ssh/ansible-key.pem
+     host1 ansible\_host=44.200.103.209 ansible\_user=ubuntu ansible\_ssh\_private\_key\_file=/home/maver/.ssh/ansible-key.pem
 
-&nbsp;   host2 ansible\_host=34.204.189.251 ansible\_user=ubuntu ansible\_ssh\_private\_key\_file=/home/maver/.ssh/ansible-key.pem
+     host2 ansible\_host=34.204.189.251 ansible\_user=ubuntu ansible\_ssh\_private\_key\_file=/home/maver/.ssh/ansible-key.pem
 
-&nbsp;   host3 ansible\_host=35.170.74.153 ansible\_user=ubuntu ansible\_ssh\_private\_key\_file=/home/maver/.ssh/ansible-key.pem
+     host3 ansible\_host=35.170.74.153 ansible\_user=ubuntu ansible\_ssh\_private\_key\_file=/home/maver/.ssh/ansible-key.pem
 
 
 
@@ -131,41 +129,18 @@ Manually maintaining several servers takes a lot of effort, is tedious, and freq
 
 &nbsp;     Features:
 
-
-
-&nbsp;     Update the lists of apt packages.
-
-
-
-&nbsp;     Install security updates.
-
-
-
-&nbsp;     Determine whether a reboot is necessary.
-
-
-
-&nbsp;     Restart the host securely
-
-
-
-&nbsp;     Make sure hosts are constantly current.
-
-
-
-&nbsp;     This eliminates the need for manual server maintenance while maintaining server security.
-
+   By applying operating system and security updates to all hosts and updating the apt package lists, this portion of the project automates system maintenance.  The system    determines whether a reboot is necessary after installing updates, and it only safely restarts the server when necessary.  The servers remain continually up to date        thanks to automatic patching, which lowers the possibility of security flaws and does away with the need for regular server maintenance.
 
 
 C. Playbooks Used
 
 playbooks/
 
-├── site.yml        -> Full baseline configuration
+    ├── site.yml        -> Full baseline configuration
 
-├── update.yml      -> Run patch cycle only
+    ├── update.yml      -> Run patch cycle only
 
-└── keys.yml        -> Deploy SSH keys only
+    └── keys.yml        -> Deploy SSH keys only
 
 
 
@@ -185,7 +160,7 @@ D. Automation With Cron (Scheduled Updates)
 
 
 
-&nbsp;  "0 2 \* \* 0 ansible-playbook /home/maver/ansible-project/playbooks/update.yml -i /home/maver/ansible-project/inventories/prod/hosts.ini"
+    "0 2 \* \* 0 ansible-playbook /home/maver/ansible-project/playbooks/update.yml -i /home/maver/ansible-project/inventories/prod/hosts.ini"
 
 
 
@@ -253,45 +228,46 @@ Outputs showed:
 
 
 
-ansible-project/
+    ansible-project/
 
-│
+    │
 
-├── inventories/
+    ├── inventories/
 
-│   └── prod/
+    │   └── prod/
 
-│       └── hosts.ini
+    │       └── hosts.ini
 
-│
+    │
 
-├── group\_vars/
+    ├── group\_vars/
 
-│
+    │
 
-├── roles/
+    ├── roles/
 
-│   ├── ssh\_keys/
+    │   ├── ssh\_keys/
 
-│   ├── baseline/
+    │   ├── baseline/
 
-│   └── patching/
+    │   └── patching/
 
-│
+    │
 
-├── playbooks/
+    ├── playbooks/
 
-│   ├── site.yml
+    │   ├── site.yml
 
-│   ├── keys.yml
+    │   ├── keys.yml
 
-│   └── update.yml
+    │   └── update.yml
 
-│
+    │
 
-├── keys/
+    ├── keys/
 
-&nbsp;    └── \*.pub
+&nbsp;  └── \*.pub
+
 
 
 
