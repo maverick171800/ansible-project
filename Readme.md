@@ -95,27 +95,9 @@ Manually maintaining several servers takes a lot of effort, is tedious, and freq
 
 
 
-&nbsp;   Functions:
+&nbsp;   Function:
 
-
-
-&nbsp;   Reads keys/\*.pub
-
-
-
-&nbsp;   Ensures correct users exist
-
-
-
-&nbsp;   Updates ~/.ssh/authorized\_keys
-
-
-
-&nbsp;   Ensures idempotency (no duplicate keys)
-
-
-
-&nbsp;   This eliminates manual key copying.
+By reading public keys from the keys/*.pub directory and verifying that the necessary users are present on each host, this project component automates SSH key management.  Next, it prevents duplicate keys from being added by updating each user's ~/.ssh/authorized_keys file in a controlled and idempotent manner.  This method makes it simple to add or delete access across all servers from a single location and eliminates the need for manual key copying by centralizing SSH key management.
 
 
 
@@ -340,6 +322,7 @@ ansible-project/
 ├── keys/
 
 &nbsp;    └── \*.pub
+
 
 
 
