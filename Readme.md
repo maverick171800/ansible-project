@@ -113,7 +113,7 @@ Manually maintaining several servers takes a lot of effort, is tedious, and freq
 
 &nbsp;    Functions include:
 
-           In order to maintain consistency and security across all servers, this portion of the project focuses on establishing a strong foundation.  It installs popular             packages like Git, curl, and Vim, sets up time synchronization using NTP/Chrony, and ensures that the necessary users are established and that appropriate sudo             access is in place.  Additionally, the baseline puts up log rotation packages to stop logs from ballooning out of hand and permits the UFW firewall to add an               additional layer of security.  All things considered, these procedures aid in preserving a steady system state and guarantee that each server is set up in a                dependable manner.
+   In order to maintain consistency and security across all servers, this portion of the project focuses on establishing a strong foundation.  It installs popular             packages like Git, curl, and Vim, sets up time synchronization using NTP/Chrony, and ensures that the necessary users are established and that appropriate sudo             access is in place.  Additionally, the baseline puts up log rotation packages to stop logs from ballooning out of hand and permits the UFW firewall to add an               additional layer of security.  All things considered, these procedures aid in preserving a steady system state and guarantee that each server is set up in a                dependable manner.
 
 
 
@@ -292,6 +292,7 @@ ansible-project/
 ├── keys/
 
 &nbsp;    └── \*.pub
+
 
 
 
