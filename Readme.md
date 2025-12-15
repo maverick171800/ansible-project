@@ -443,36 +443,3 @@ ansible-project/
 &nbsp;    └── \*.pub
 
 
-
-
-
-###### 5\. Demo Video Summary (What My Video Shows)
-
-
-
-&nbsp;   In the demo:
-
-
-
-&nbsp;   Ping all servers
-
-
-
-&nbsp;   Run site.yml to deploy baseline
-
-
-
-&nbsp;   Show SSH keys applied
-
-
-
-&nbsp;   Show installed packages and firewall
-
-
-
-&nbsp;   Run update.yml to apply patches
-
-
-
-&nbsp;   Show reboot triggered when required
-
