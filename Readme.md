@@ -10,62 +10,7 @@ Instead of manually configuring each Linux server individually for this project,
 
 ###### 2\. What Problem Does It Solve?
 
-
-
-&nbsp;   Managing multiple servers manually is slow, repetitive, and error-prone.
-
-
-
-
-
-&nbsp;   Common issues include:
-
-
-
-&nbsp;   Copying SSH keys by hand
-
-
-
-&nbsp;   Unreliable server setup
-
-
-
-&nbsp;   Not applying updates
-
-
-
-&nbsp;   Outdated packages pose a security risk.
-
-
-
-&nbsp;   Setting up a server by hand takes hours.
-
-
-
-&nbsp;   This project uses Ansible automation to address these issues, guaranteeing:
-
-
-
-&nbsp;   Each host is set up in the same manner.
-
-
-
-&nbsp;   SSH keys are controlled centrally.
-
-
-
-&nbsp;   Updates are scheduled to run automatically.
-
-
-
-&nbsp;   No manual setup or login
-
-
-
-&nbsp;   Quick installation of new servers
-
-
-
+Manually maintaining several servers takes a lot of effort, is tedious, and frequently results in setup problems.  Inconsistent environments and security threats from out-of-date packages might arise from tasks like manually copying SSH keys, configuring servers one at a time, and neglecting to apply updates.  As the number of systems increases, manually configuring a server does not scale well and can take hours.  By centrally managing SSH keys, applying the same baseline configuration to each server, and setting up automatic operating system updates, this project employs Ansible automation to address these problems.  Because of this, servers can be swiftly, reliably, and securely deployed and maintained without requiring frequent manual logins.
 
 
 ###### 3\. How Is It Being Solved? (Architecture \& Automation)
@@ -395,6 +340,7 @@ ansible-project/
 ├── keys/
 
 &nbsp;    └── \*.pub
+
 
 
 
