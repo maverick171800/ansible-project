@@ -4,53 +4,7 @@
 
 ###### 1\. What is the Project?
 
-
-
-&nbsp;   This project uses Ansible to automatically configure, secure, and maintain a fleet of Linux hosts.
-
-
-
-&nbsp;   The setup includes:
-
-
-
-&nbsp;   One control node -> My local Ubuntu (WSL)
-
-
-
-&nbsp;   Three managed nodes -> AWS EC2 Free-Tier Ubuntu instances
-
-
-
-&nbsp;   The objective is to create a completely automated system capable of:
-
-
-
-&nbsp;    Install SSH keys
-
-
-
-&nbsp;    Use the system's default settings.
-
-
-
-&nbsp;    Install the necessary services and packages.
-
-
-
-&nbsp;    Strengthen servers
-
-
-
-&nbsp;    Perform routine OS updates
-
-
-
-&nbsp;    If necessary, restart
-
-
-
-&nbsp;    Use Infrastructure-as-Code to maintain consistency across all hosts.
+Instead of manually configuring each Linux server individually for this project, I utilized Ansible to automatically configure and manage a collection of servers.  Three Ubuntu servers hosted on AWS EC2 free-tier instances and one Ansible control node operating on my local Ubuntu system via WSL make up the environment.  The project's objective was to develop a completely automated setup that could apply default system configurations, install necessary services and packages, install SSH keys, enhance server security through baseline hardening, and carry out routine operating system updates.  The system also takes care of rebooting if updates call for it.  This project's use of Infrastructure-as-Code guarantees that every server is set up uniformly and can be readily changed or maintained from a single control point.
 
 
 
@@ -441,5 +395,6 @@ ansible-project/
 ├── keys/
 
 &nbsp;    └── \*.pub
+
 
 
