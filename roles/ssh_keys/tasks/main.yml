@@ -1,0 +1,13 @@
+---
+# ssh_keys role - installs public keys from keys/ folder into authorized_keys
+
+- name: Load public key files
+  set_fact:
+    pubkeys: "{{ lookup('fileglob', playbook_dir + '/../keys/*.pub', wantlist=True) }}"
+
+- name: Ensure authorized_keys is present for ubuntu user
+  authorized_key:
+    user: ubuntu
+    state: present
+    key: "{{ lookup('file', item) }}"
+  loop: "{{ pubkeys }}"

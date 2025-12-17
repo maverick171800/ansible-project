@@ -1,0 +1,10 @@
+---
+- name: Update all packages
+  apt:
+    upgrade: dist
+    update_cache: yes
+
+- name: Reboot if needed
+  reboot:
+    msg: "Reboot initiated by Ansible patching role"
+  when: ansible_facts.reboot_required | default(false)
