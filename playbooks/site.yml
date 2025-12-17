@@ -1,0 +1,8 @@
+---
+- hosts: allnodes
+  become: yes
+  roles:
+    - ssh_keys
+    - baseline
+    - patching
+

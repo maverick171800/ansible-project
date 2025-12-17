@@ -1,0 +1,7 @@
+---
+- name: Patch and update all servers
+  hosts: allnodes
+  become: yes
+
+  roles:
+    - patching

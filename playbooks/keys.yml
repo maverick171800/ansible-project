@@ -1,0 +1,7 @@
+---
+- name: Deploy SSH authorized keys to all nodes
+  hosts: allnodes
+  become: yes
+
+  roles:
+    - ssh_keys
